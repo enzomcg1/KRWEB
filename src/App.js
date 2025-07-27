@@ -11,6 +11,9 @@ import DialogTitle from '@mui/material/DialogTitle';
 import DialogContent from '@mui/material/DialogContent';
 import DialogActions from '@mui/material/DialogActions';
 import { useState, useEffect } from 'react';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import Divider from '@mui/material/Divider';
+import IconButton from '@mui/material/IconButton';
 
 const darkTheme = createTheme({
   palette: {
@@ -486,13 +489,136 @@ function App() {
             </Box>
           </Box>
         </Container>
+        {/* Por qué elegirnos Section */}
+        <Container maxWidth="lg" sx={{ py: 6, bgcolor: 'background.paper' }}>
+          <Typography variant="h3" color="primary.main" textAlign="center" gutterBottom fontWeight={700} className="orbitron" sx={{ mb: 6 }}>
+            ¿Por qué elegirnos?
+          </Typography>
+          <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 4 }}>
+            <Box sx={{ 
+              display: 'flex', 
+              alignItems: 'flex-start', 
+              gap: 2, 
+              p: 3, 
+              borderRadius: 2,
+              transition: 'all 0.3s ease',
+              cursor: 'pointer',
+              '&:hover': {
+                transform: 'translateY(-8px)',
+                boxShadow: '0 8px 25px rgba(232, 58, 90, 0.2)',
+                bgcolor: 'rgba(232, 58, 90, 0.05)',
+              },
+            }}>
+              <Typography variant="h5" color="primary.main" sx={{ fontWeight: 600 }}>
+                ✔️
+              </Typography>
+              <Box>
+                <Typography variant="h6" color="primary.main" sx={{ mb: 1, fontWeight: 600, className: "orbitron" }}>
+                  Materiales de alta calidad
+                </Typography>
+                <Typography variant="body1" color="text.secondary" sx={{ lineHeight: 1.6 }}>
+                  Utilizamos solo materiales premium y marcas reconocidas para garantizar durabilidad y acabados profesionales.
+                </Typography>
+              </Box>
+            </Box>
+            <Box sx={{ 
+              display: 'flex', 
+              alignItems: 'flex-start', 
+              gap: 2, 
+              p: 3, 
+              borderRadius: 2,
+              transition: 'all 0.3s ease',
+              cursor: 'pointer',
+              '&:hover': {
+                transform: 'translateY(-8px)',
+                boxShadow: '0 8px 25px rgba(232, 58, 90, 0.2)',
+                bgcolor: 'rgba(232, 58, 90, 0.05)',
+              },
+            }}>
+              <Typography variant="h5" color="primary.main" sx={{ fontWeight: 600 }}>
+                ✔️
+              </Typography>
+              <Box>
+                <Typography variant="h6" color="primary.main" sx={{ mb: 1, fontWeight: 600, className: "orbitron" }}>
+                  Compromiso con los tiempos
+                </Typography>
+                <Typography variant="body1" color="text.secondary" sx={{ lineHeight: 1.6 }}>
+                  Cumplimos con los plazos acordados. Tu tiempo es valioso y nos comprometemos a entregar en la fecha prometida.
+                </Typography>
+              </Box>
+            </Box>
+            <Box sx={{ 
+              display: 'flex', 
+              alignItems: 'flex-start', 
+              gap: 2, 
+              p: 3, 
+              borderRadius: 2,
+              transition: 'all 0.3s ease',
+              cursor: 'pointer',
+              '&:hover': {
+                transform: 'translateY(-8px)',
+                boxShadow: '0 8px 25px rgba(232, 58, 90, 0.2)',
+                bgcolor: 'rgba(232, 58, 90, 0.05)',
+              },
+            }}>
+              <Typography variant="h5" color="primary.main" sx={{ fontWeight: 600 }}>
+                ✔️
+              </Typography>
+              <Box>
+                <Typography variant="h6" color="primary.main" sx={{ mb: 1, fontWeight: 600, className: "orbitron" }}>
+                  Limpieza y orden
+                </Typography>
+                <Typography variant="body1" color="text.secondary" sx={{ lineHeight: 1.6 }}>
+                  Mantenemos tu espacio limpio y organizado durante todo el proceso. Respetamos tu hogar como si fuera el nuestro.
+                </Typography>
+              </Box>
+            </Box>
+            <Box sx={{ 
+              display: 'flex', 
+              alignItems: 'flex-start', 
+              gap: 2, 
+              p: 3, 
+              borderRadius: 2,
+              transition: 'all 0.3s ease',
+              cursor: 'pointer',
+              '&:hover': {
+                transform: 'translateY(-8px)',
+                boxShadow: '0 8px 25px rgba(232, 58, 90, 0.2)',
+                bgcolor: 'rgba(232, 58, 90, 0.05)',
+              },
+            }}>
+              <Typography variant="h5" color="primary.main" sx={{ fontWeight: 600 }}>
+                ✔️
+              </Typography>
+              <Box>
+                <Typography variant="h6" color="primary.main" sx={{ mb: 1, fontWeight: 600, className: "orbitron" }}>
+                  Trato directo y transparente
+                </Typography>
+                <Typography variant="body1" color="text.secondary" sx={{ lineHeight: 1.6 }}>
+                  Comunicación clara y honesta. Sin intermediarios, tratamos directamente contigo para una experiencia personalizada.
+                </Typography>
+              </Box>
+            </Box>
+          </Box>
+        </Container>
         {/* Proceso de Trabajo Section */}
         <Container maxWidth="lg" sx={{ py: 6, bgcolor: 'background.paper' }}>
           <Typography variant="h3" color="primary.main" textAlign="center" gutterBottom fontWeight={700} className="orbitron" sx={{ mb: 6 }}>
             Proceso de Trabajo
           </Typography>
           <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 4 }}>
-            <Box sx={{ textAlign: 'center', p: 3 }}>
+            <Box sx={{ 
+              textAlign: 'center', 
+              p: 3, 
+              borderRadius: 2,
+              transition: 'all 0.3s ease',
+              cursor: 'pointer',
+              '&:hover': {
+                transform: 'translateY(-8px)',
+                boxShadow: '0 8px 25px rgba(232, 58, 90, 0.2)',
+                bgcolor: 'rgba(232, 58, 90, 0.05)',
+              },
+            }}>
               <Typography variant="h4" color="primary.main" sx={{ mb: 2, fontWeight: 600, className: "orbitron" }}>
                 1. Contacto y Presupuesto
               </Typography>
@@ -500,7 +626,18 @@ function App() {
                 Contactanos por WhatsApp o teléfono. Evaluamos tu proyecto y te entregamos un presupuesto detallado y transparente sin compromiso.
               </Typography>
             </Box>
-            <Box sx={{ textAlign: 'center', p: 3 }}>
+            <Box sx={{ 
+              textAlign: 'center', 
+              p: 3, 
+              borderRadius: 2,
+              transition: 'all 0.3s ease',
+              cursor: 'pointer',
+              '&:hover': {
+                transform: 'translateY(-8px)',
+                boxShadow: '0 8px 25px rgba(232, 58, 90, 0.2)',
+                bgcolor: 'rgba(232, 58, 90, 0.05)',
+              },
+            }}>
               <Typography variant="h4" color="primary.main" sx={{ mb: 2, fontWeight: 600, className: "orbitron" }}>
                 2. Visita Técnica
               </Typography>
@@ -508,7 +645,18 @@ function App() {
                 Realizamos una visita al sitio para evaluar las condiciones, tomar medidas precisas y planificar la ejecución de la obra.
               </Typography>
             </Box>
-            <Box sx={{ textAlign: 'center', p: 3 }}>
+            <Box sx={{ 
+              textAlign: 'center', 
+              p: 3, 
+              borderRadius: 2,
+              transition: 'all 0.3s ease',
+              cursor: 'pointer',
+              '&:hover': {
+                transform: 'translateY(-8px)',
+                boxShadow: '0 8px 25px rgba(232, 58, 90, 0.2)',
+                bgcolor: 'rgba(232, 58, 90, 0.05)',
+              },
+            }}>
               <Typography variant="h4" color="primary.main" sx={{ mb: 2, fontWeight: 600, className: "orbitron" }}>
                 3. Ejecución de la Obra
               </Typography>
@@ -516,7 +664,18 @@ function App() {
                 Nuestro equipo especializado ejecuta la obra con materiales de calidad y técnicas profesionales, manteniendo comunicación constante.
               </Typography>
             </Box>
-            <Box sx={{ textAlign: 'center', p: 3 }}>
+            <Box sx={{ 
+              textAlign: 'center', 
+              p: 3, 
+              borderRadius: 2,
+              transition: 'all 0.3s ease',
+              cursor: 'pointer',
+              '&:hover': {
+                transform: 'translateY(-8px)',
+                boxShadow: '0 8px 25px rgba(232, 58, 90, 0.2)',
+                bgcolor: 'rgba(232, 58, 90, 0.05)',
+              },
+            }}>
               <Typography variant="h4" color="primary.main" sx={{ mb: 2, fontWeight: 600, className: "orbitron" }}>
                 4. Entrega Final y Revisión
               </Typography>
@@ -527,30 +686,71 @@ function App() {
           </Box>
         </Container>
         {/* Footer */}
-        <Box component="footer" sx={{ py: 2, textAlign: 'center', bgcolor: 'background.paper', mt: 'auto', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 2 }}>
-          <Typography variant="body2" color="text.secondary">
-            © {new Date().getFullYear()} KR Reformas. All rights reserved.
-          </Typography>
-          <img 
-            src="/images/AntesDespues/whatsApppppp.png" 
-            alt="WhatsApp" 
-            style={{ 
-              height: 30, 
-              cursor: 'pointer',
-              transition: 'all 0.3s ease',
-            }}
-            onClick={() => {
-              const message = encodeURIComponent("Hola! Me gustaría contactar con KR Reformas.");
-              const whatsappUrl = `https://wa.me/595994351389?text=${message}`;
-              window.open(whatsappUrl, '_blank');
-            }}
-            onMouseEnter={(e) => {
-              e.target.style.transform = 'scale(1.1)';
-            }}
-            onMouseLeave={(e) => {
-              e.target.style.transform = 'scale(1)';
-            }}
-          />
+        <Box component="footer" sx={{ bgcolor: 'background.paper', py: 3, mt: 'auto' }}>
+          <Container maxWidth="lg">
+            <Box sx={{ textAlign: 'center', mb: 2 }}>
+              <Typography variant="h5" color="primary.main" gutterBottom fontWeight={700} className="orbitron">
+                ¿Tenés dudas?
+              </Typography>
+              <Typography variant="h6" color="text.secondary" gutterBottom>
+                ¿Querés saber cuánto cuesta tu proyecto?
+              </Typography>
+              <Typography variant="body1" color="text.secondary" sx={{ mb: 2 }}>
+                📲 ¡Hablá con nosotros por WhatsApp sin compromiso!
+              </Typography>
+              <Button
+                component="a"
+                href={`https://wa.me/34622215241?text=${encodeURIComponent("Hola! Me gustaría saber cuánto cuesta mi proyecto de reforma/pintura.")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="contained"
+                color="primary"
+                size="large"
+                startIcon={<WhatsAppIcon />}
+                sx={{
+                  borderRadius: 2,
+                  px: 4,
+                  py: 1.5,
+                  fontSize: '1.1rem',
+                  fontWeight: 600,
+                  textTransform: 'none',
+                  boxShadow: 3,
+                  '&:hover': {
+                    transform: 'translateY(-2px)',
+                    boxShadow: 6,
+                  },
+                  '&:active': {
+                    transform: 'translateY(0)',
+                  },
+                  transition: 'all 0.3s ease',
+                }}
+              >
+                Consultar por WhatsApp
+              </Button>
+            </Box>
+            <Divider sx={{ my: 2 }} />
+            <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 2 }}>
+              <Typography variant="body2" color="text.secondary">
+                © 2024 KR Reformas. Todos los derechos reservados.
+              </Typography>
+              <IconButton
+                component="a"
+                href={`https://wa.me/34622215241?text=${encodeURIComponent("Hola! Me gustaría solicitar un presupuesto para reformas/pintura.")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={{
+                  color: 'primary.main',
+                  '&:hover': {
+                    transform: 'scale(1.1)',
+                    color: 'primary.dark',
+                  },
+                  transition: 'all 0.3s ease',
+                }}
+              >
+                <WhatsAppIcon sx={{ fontSize: 28 }} />
+              </IconButton>
+            </Box>
+          </Container>
         </Box>
       </Box>
     </ThemeProvider>

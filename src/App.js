@@ -240,7 +240,7 @@ function App() {
               display: 'flex', 
               flexDirection: 'column', 
               alignItems: 'center', 
-              minWidth: { xs: 200, sm: 250, md: 300, lg: 350 }, 
+              minWidth: { xs: 120, sm: 200, md: 250, lg: 300 }, 
               flexShrink: 0 
             }}>
               <Typography 
@@ -286,7 +286,7 @@ function App() {
               display: 'flex', 
               flexDirection: 'column', 
               alignItems: 'center', 
-              minWidth: { xs: 200, sm: 250, md: 300, lg: 350 }, 
+              minWidth: { xs: 120, sm: 200, md: 250, lg: 300 }, 
               flexShrink: 0 
             }}>
               <Typography 
@@ -332,7 +332,7 @@ function App() {
               display: 'flex', 
               flexDirection: 'column', 
               alignItems: 'center', 
-              minWidth: { xs: 200, sm: 250, md: 300, lg: 350 }, 
+              minWidth: { xs: 120, sm: 200, md: 250, lg: 300 }, 
               flexShrink: 0 
             }}>
               <Typography 
@@ -378,7 +378,7 @@ function App() {
               display: 'flex', 
               flexDirection: 'column', 
               alignItems: 'center', 
-              minWidth: { xs: 200, sm: 250, md: 300, lg: 350 }, 
+              minWidth: { xs: 120, sm: 200, md: 250, lg: 300 }, 
               flexShrink: 0 
             }}>
               <Typography 
@@ -424,7 +424,7 @@ function App() {
               display: 'flex', 
               flexDirection: 'column', 
               alignItems: 'center', 
-              minWidth: { xs: 200, sm: 250, md: 300, lg: 350 }, 
+              minWidth: { xs: 120, sm: 200, md: 250, lg: 300 }, 
               flexShrink: 0 
             }}>
               <Typography 
@@ -470,7 +470,7 @@ function App() {
               display: 'flex', 
               flexDirection: 'column', 
               alignItems: 'center', 
-              minWidth: { xs: 200, sm: 250, md: 300, lg: 350 }, 
+              minWidth: { xs: 120, sm: 200, md: 250, lg: 300 }, 
               flexShrink: 0 
             }}>
               <Typography 
@@ -516,7 +516,7 @@ function App() {
               display: 'flex', 
               flexDirection: 'column', 
               alignItems: 'center', 
-              minWidth: { xs: 200, sm: 250, md: 300, lg: 350 }, 
+              minWidth: { xs: 120, sm: 200, md: 250, lg: 300 }, 
               flexShrink: 0 
             }}>
               <Typography 
@@ -562,7 +562,7 @@ function App() {
               display: 'flex', 
               flexDirection: 'column', 
               alignItems: 'center', 
-              minWidth: { xs: 200, sm: 250, md: 300, lg: 350 }, 
+              minWidth: { xs: 120, sm: 200, md: 250, lg: 300 }, 
               flexShrink: 0 
             }}>
               <Typography 
@@ -608,7 +608,7 @@ function App() {
               display: 'flex', 
               flexDirection: 'column', 
               alignItems: 'center', 
-              minWidth: { xs: 200, sm: 250, md: 300, lg: 350 }, 
+              minWidth: { xs: 120, sm: 200, md: 250, lg: 300 }, 
               flexShrink: 0 
             }}>
               <Typography 
@@ -654,7 +654,7 @@ function App() {
               display: 'flex', 
               flexDirection: 'column', 
               alignItems: 'center', 
-              minWidth: { xs: 200, sm: 250, md: 300, lg: 350 }, 
+              minWidth: { xs: 120, sm: 200, md: 250, lg: 300 }, 
               flexShrink: 0 
             }}>
               <Typography 
@@ -700,7 +700,7 @@ function App() {
               display: 'flex', 
               flexDirection: 'column', 
               alignItems: 'center', 
-              minWidth: { xs: 200, sm: 250, md: 300, lg: 350 }, 
+              minWidth: { xs: 120, sm: 200, md: 250, lg: 300 }, 
               flexShrink: 0 
             }}>
               <Typography 
@@ -746,7 +746,7 @@ function App() {
               display: 'flex', 
               flexDirection: 'column', 
               alignItems: 'center', 
-              minWidth: { xs: 200, sm: 250, md: 300, lg: 350 }, 
+              minWidth: { xs: 120, sm: 200, md: 250, lg: 300 }, 
               flexShrink: 0 
             }}>
               <Typography 
@@ -792,7 +792,7 @@ function App() {
               display: 'flex', 
               flexDirection: 'column', 
               alignItems: 'center', 
-              minWidth: { xs: 200, sm: 250, md: 300, lg: 350 }, 
+              minWidth: { xs: 120, sm: 200, md: 250, lg: 300 }, 
               flexShrink: 0 
             }}>
               <Typography 

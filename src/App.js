@@ -218,621 +218,630 @@ function App() {
           </Typography>
           <Box sx={{ 
             display: 'flex', 
-            gap: { xs: 2, md: 3 }, 
-            overflowX: 'auto', 
+            flexDirection: { xs: 'column', md: 'row' },
+            gap: 3, 
+            overflowX: { xs: 'visible', md: 'auto' },
             pb: 2,
             '&::-webkit-scrollbar': {
               height: 8,
             },
             '&::-webkit-scrollbar-track': {
-              background: 'rgba(0,0,0,0.1)',
+              backgroundColor: 'rgba(0,0,0,0.1)',
               borderRadius: 4,
             },
             '&::-webkit-scrollbar-thumb': {
-              background: 'rgba(232, 58, 90, 0.5)',
+              backgroundColor: 'primary.main',
               borderRadius: 4,
-              '&:hover': {
-                background: 'rgba(232, 58, 90, 0.7)',
-              },
             },
+            '&::-webkit-scrollbar-thumb:hover': {
+              backgroundColor: 'primary.dark',
+            }
           }}>
+            {/* Grid para móviles, horizontal scroll para desktop */}
             <Box sx={{ 
-              display: 'flex', 
-              flexDirection: 'column', 
-              alignItems: 'center', 
-              minWidth: { xs: 120, sm: 200, md: 250, lg: 300 }, 
-              flexShrink: 0 
+              display: { xs: 'grid', md: 'flex' },
+              gridTemplateColumns: { xs: 'repeat(2, 1fr)', sm: 'repeat(3, 1fr)' },
+              gap: { xs: 2, md: 3 },
+              width: '100%'
             }}>
-              <Typography 
-                variant="h6" 
-                color="primary.main" 
-                sx={{ 
-                  mb: 2, 
-                  fontWeight: 600, 
-                  className: "orbitron",
-                  fontSize: { xs: '0.875rem', md: '1.25rem' },
-                  zIndex: 2,
-                  position: 'relative'
-                }}
-              >
-                Antes
-              </Typography>
-              <img 
-                src="/images/AntesDespues/2.png" 
-                alt="Antes y después - Trabajo 1" 
-                style={{ 
-                  width: '100%', 
-                  height: 'auto',
-                  borderRadius: 12, 
-                  boxShadow: '0 8px 32px rgba(0,0,0,0.2)',
-                  transition: 'all 0.3s ease',
-                  cursor: 'pointer',
-                  zIndex: 1,
-                  position: 'relative'
-                }} 
-                onMouseEnter={(e) => {
-                  e.target.style.transform = 'scale(1.05)';
-                  e.target.style.boxShadow = '0 12px 40px rgba(232, 58, 90, 0.3)';
-                  e.target.style.zIndex = '10';
-                }}
-                onMouseLeave={(e) => {
-                  e.target.style.transform = 'scale(1)';
-                  e.target.style.boxShadow = '0 8px 32px rgba(0,0,0,0.2)';
-                  e.target.style.zIndex = '1';
-                }}
-              />
-            </Box>
-            <Box sx={{ 
-              display: 'flex', 
-              flexDirection: 'column', 
-              alignItems: 'center', 
-              minWidth: { xs: 120, sm: 200, md: 250, lg: 300 }, 
-              flexShrink: 0 
-            }}>
-              <Typography 
-                variant="h6" 
-                color="primary.main" 
-                sx={{ 
-                  mb: 2, 
-                  fontWeight: 600, 
-                  className: "orbitron",
-                  fontSize: { xs: '0.875rem', md: '1.25rem' },
-                  zIndex: 2,
-                  position: 'relative'
-                }}
-              >
-                Después
-              </Typography>
-              <img 
-                src="/images/AntesDespues/4.png" 
-                alt="Antes y después - Trabajo 2" 
-                style={{ 
-                  width: '100%', 
-                  height: 'auto',
-                  borderRadius: 12, 
-                  boxShadow: '0 8px 32px rgba(0,0,0,0.2)',
-                  transition: 'all 0.3s ease',
-                  cursor: 'pointer',
-                  zIndex: 1,
-                  position: 'relative'
-                }} 
-                onMouseEnter={(e) => {
-                  e.target.style.transform = 'scale(1.05)';
-                  e.target.style.boxShadow = '0 12px 40px rgba(232, 58, 90, 0.3)';
-                  e.target.style.zIndex = '10';
-                }}
-                onMouseLeave={(e) => {
-                  e.target.style.transform = 'scale(1)';
-                  e.target.style.boxShadow = '0 8px 32px rgba(0,0,0,0.2)';
-                  e.target.style.zIndex = '1';
-                }}
-              />
-            </Box>
-            <Box sx={{ 
-              display: 'flex', 
-              flexDirection: 'column', 
-              alignItems: 'center', 
-              minWidth: { xs: 120, sm: 200, md: 250, lg: 300 }, 
-              flexShrink: 0 
-            }}>
-              <Typography 
-                variant="h6" 
-                color="primary.main" 
-                sx={{ 
-                  mb: 2, 
-                  fontWeight: 600, 
-                  className: "orbitron",
-                  fontSize: { xs: '0.875rem', md: '1.25rem' },
-                  zIndex: 2,
-                  position: 'relative'
-                }}
-              >
-                Antes
-              </Typography>
-              <img 
-                src="/images/AntesDespues/6.png" 
-                alt="Antes y después - Trabajo 3" 
-                style={{ 
-                  width: '100%', 
-                  height: 'auto',
-                  borderRadius: 12, 
-                  boxShadow: '0 8px 32px rgba(0,0,0,0.2)',
-                  transition: 'all 0.3s ease',
-                  cursor: 'pointer',
-                  zIndex: 1,
-                  position: 'relative'
-                }} 
-                onMouseEnter={(e) => {
-                  e.target.style.transform = 'scale(1.05)';
-                  e.target.style.boxShadow = '0 12px 40px rgba(232, 58, 90, 0.3)';
-                  e.target.style.zIndex = '10';
-                }}
-                onMouseLeave={(e) => {
-                  e.target.style.transform = 'scale(1)';
-                  e.target.style.boxShadow = '0 8px 32px rgba(0,0,0,0.2)';
-                  e.target.style.zIndex = '1';
-                }}
-              />
-            </Box>
-            <Box sx={{ 
-              display: 'flex', 
-              flexDirection: 'column', 
-              alignItems: 'center', 
-              minWidth: { xs: 120, sm: 200, md: 250, lg: 300 }, 
-              flexShrink: 0 
-            }}>
-              <Typography 
-                variant="h6" 
-                color="primary.main" 
-                sx={{ 
-                  mb: 2, 
-                  fontWeight: 600, 
-                  className: "orbitron",
-                  fontSize: { xs: '0.875rem', md: '1.25rem' },
-                  zIndex: 2,
-                  position: 'relative'
-                }}
-              >
-                Después
-              </Typography>
-              <img 
-                src="/images/AntesDespues/8.png" 
-                alt="Antes y después - Trabajo 4" 
-                style={{ 
-                  width: '100%', 
-                  height: 'auto',
-                  borderRadius: 12, 
-                  boxShadow: '0 8px 32px rgba(0,0,0,0.2)',
-                  transition: 'all 0.3s ease',
-                  cursor: 'pointer',
-                  zIndex: 1,
-                  position: 'relative'
-                }} 
-                onMouseEnter={(e) => {
-                  e.target.style.transform = 'scale(1.05)';
-                  e.target.style.boxShadow = '0 12px 40px rgba(232, 58, 90, 0.3)';
-                  e.target.style.zIndex = '10';
-                }}
-                onMouseLeave={(e) => {
-                  e.target.style.transform = 'scale(1)';
-                  e.target.style.boxShadow = '0 8px 32px rgba(0,0,0,0.2)';
-                  e.target.style.zIndex = '1';
-                }}
-              />
-            </Box>
-            <Box sx={{ 
-              display: 'flex', 
-              flexDirection: 'column', 
-              alignItems: 'center', 
-              minWidth: { xs: 120, sm: 200, md: 250, lg: 300 }, 
-              flexShrink: 0 
-            }}>
-              <Typography 
-                variant="h6" 
-                color="primary.main" 
-                sx={{ 
-                  mb: 2, 
-                  fontWeight: 600, 
-                  className: "orbitron",
-                  fontSize: { xs: '0.875rem', md: '1.25rem' },
-                  zIndex: 2,
-                  position: 'relative'
-                }}
-              >
-                Antes
-              </Typography>
-              <img 
-                src="/images/AntesDespues/antes11.png" 
-                alt="Antes y después - Trabajo 5" 
-                style={{ 
-                  width: '100%', 
-                  height: 'auto',
-                  borderRadius: 12, 
-                  boxShadow: '0 8px 32px rgba(0,0,0,0.2)',
-                  transition: 'all 0.3s ease',
-                  cursor: 'pointer',
-                  zIndex: 1,
-                  position: 'relative'
-                }} 
-                onMouseEnter={(e) => {
-                  e.target.style.transform = 'scale(1.05)';
-                  e.target.style.boxShadow = '0 12px 40px rgba(232, 58, 90, 0.3)';
-                  e.target.style.zIndex = '10';
-                }}
-                onMouseLeave={(e) => {
-                  e.target.style.transform = 'scale(1)';
-                  e.target.style.boxShadow = '0 8px 32px rgba(0,0,0,0.2)';
-                  e.target.style.zIndex = '1';
-                }}
-              />
-            </Box>
-            <Box sx={{ 
-              display: 'flex', 
-              flexDirection: 'column', 
-              alignItems: 'center', 
-              minWidth: { xs: 120, sm: 200, md: 250, lg: 300 }, 
-              flexShrink: 0 
-            }}>
-              <Typography 
-                variant="h6" 
-                color="primary.main" 
-                sx={{ 
-                  mb: 2, 
-                  fontWeight: 600, 
-                  className: "orbitron",
-                  fontSize: { xs: '0.875rem', md: '1.25rem' },
-                  zIndex: 2,
-                  position: 'relative'
-                }}
-              >
-                Después
-              </Typography>
-              <img 
-                src="/images/AntesDespues/despues21.png" 
-                alt="Antes y después - Trabajo 6" 
-                style={{ 
-                  width: '100%', 
-                  height: 'auto',
-                  borderRadius: 12, 
-                  boxShadow: '0 8px 32px rgba(0,0,0,0.2)',
-                  transition: 'all 0.3s ease',
-                  cursor: 'pointer',
-                  zIndex: 1,
-                  position: 'relative'
-                }} 
-                onMouseEnter={(e) => {
-                  e.target.style.transform = 'scale(1.05)';
-                  e.target.style.boxShadow = '0 12px 40px rgba(232, 58, 90, 0.3)';
-                  e.target.style.zIndex = '10';
-                }}
-                onMouseLeave={(e) => {
-                  e.target.style.transform = 'scale(1)';
-                  e.target.style.boxShadow = '0 8px 32px rgba(0,0,0,0.2)';
-                  e.target.style.zIndex = '1';
-                }}
-              />
-            </Box>
-            <Box sx={{ 
-              display: 'flex', 
-              flexDirection: 'column', 
-              alignItems: 'center', 
-              minWidth: { xs: 120, sm: 200, md: 250, lg: 300 }, 
-              flexShrink: 0 
-            }}>
-              <Typography 
-                variant="h6" 
-                color="primary.main" 
-                sx={{ 
-                  mb: 2, 
-                  fontWeight: 600, 
-                  className: "orbitron",
-                  fontSize: { xs: '0.875rem', md: '1.25rem' },
-                  zIndex: 2,
-                  position: 'relative'
-                }}
-              >
-                Reforma
-              </Typography>
-              <img 
-                src="/images/AntesDespues/reforma1.png" 
-                alt="Reforma 1" 
-                style={{ 
-                  width: '100%', 
-                  height: 'auto',
-                  borderRadius: 12, 
-                  boxShadow: '0 8px 32px rgba(0,0,0,0.2)',
-                  transition: 'all 0.3s ease',
-                  cursor: 'pointer',
-                  zIndex: 1,
-                  position: 'relative'
-                }} 
-                onMouseEnter={(e) => {
-                  e.target.style.transform = 'scale(1.05)';
-                  e.target.style.boxShadow = '0 12px 40px rgba(232, 58, 90, 0.3)';
-                  e.target.style.zIndex = '10';
-                }}
-                onMouseLeave={(e) => {
-                  e.target.style.transform = 'scale(1)';
-                  e.target.style.boxShadow = '0 8px 32px rgba(0,0,0,0.2)';
-                  e.target.style.zIndex = '1';
-                }}
-              />
-            </Box>
-            <Box sx={{ 
-              display: 'flex', 
-              flexDirection: 'column', 
-              alignItems: 'center', 
-              minWidth: { xs: 120, sm: 200, md: 250, lg: 300 }, 
-              flexShrink: 0 
-            }}>
-              <Typography 
-                variant="h6" 
-                color="primary.main" 
-                sx={{ 
-                  mb: 2, 
-                  fontWeight: 600, 
-                  className: "orbitron",
-                  fontSize: { xs: '0.875rem', md: '1.25rem' },
-                  zIndex: 2,
-                  position: 'relative'
-                }}
-              >
-                Reforma
-              </Typography>
-              <img 
-                src="/images/AntesDespues/reforma2.png" 
-                alt="Reforma 2" 
-                style={{ 
-                  width: '100%', 
-                  height: 'auto',
-                  borderRadius: 12, 
-                  boxShadow: '0 8px 32px rgba(0,0,0,0.2)',
-                  transition: 'all 0.3s ease',
-                  cursor: 'pointer',
-                  zIndex: 1,
-                  position: 'relative'
-                }} 
-                onMouseEnter={(e) => {
-                  e.target.style.transform = 'scale(1.05)';
-                  e.target.style.boxShadow = '0 12px 40px rgba(232, 58, 90, 0.3)';
-                  e.target.style.zIndex = '10';
-                }}
-                onMouseLeave={(e) => {
-                  e.target.style.transform = 'scale(1)';
-                  e.target.style.boxShadow = '0 8px 32px rgba(0,0,0,0.2)';
-                  e.target.style.zIndex = '1';
-                }}
-              />
-            </Box>
-            <Box sx={{ 
-              display: 'flex', 
-              flexDirection: 'column', 
-              alignItems: 'center', 
-              minWidth: { xs: 120, sm: 200, md: 250, lg: 300 }, 
-              flexShrink: 0 
-            }}>
-              <Typography 
-                variant="h6" 
-                color="primary.main" 
-                sx={{ 
-                  mb: 2, 
-                  fontWeight: 600, 
-                  className: "orbitron",
-                  fontSize: { xs: '0.875rem', md: '1.25rem' },
-                  zIndex: 2,
-                  position: 'relative'
-                }}
-              >
-                Reforma
-              </Typography>
-              <img 
-                src="/images/AntesDespues/reforma3.png" 
-                alt="Reforma 3" 
-                style={{ 
-                  width: '100%', 
-                  height: 'auto',
-                  borderRadius: 12, 
-                  boxShadow: '0 8px 32px rgba(0,0,0,0.2)',
-                  transition: 'all 0.3s ease',
-                  cursor: 'pointer',
-                  zIndex: 1,
-                  position: 'relative'
-                }} 
-                onMouseEnter={(e) => {
-                  e.target.style.transform = 'scale(1.05)';
-                  e.target.style.boxShadow = '0 12px 40px rgba(232, 58, 90, 0.3)';
-                  e.target.style.zIndex = '10';
-                }}
-                onMouseLeave={(e) => {
-                  e.target.style.transform = 'scale(1)';
-                  e.target.style.boxShadow = '0 8px 32px rgba(0,0,0,0.2)';
-                  e.target.style.zIndex = '1';
-                }}
-              />
-            </Box>
-            <Box sx={{ 
-              display: 'flex', 
-              flexDirection: 'column', 
-              alignItems: 'center', 
-              minWidth: { xs: 120, sm: 200, md: 250, lg: 300 }, 
-              flexShrink: 0 
-            }}>
-              <Typography 
-                variant="h6" 
-                color="primary.main" 
-                sx={{ 
-                  mb: 2, 
-                  fontWeight: 600, 
-                  className: "orbitron",
-                  fontSize: { xs: '0.875rem', md: '1.25rem' },
-                  zIndex: 2,
-                  position: 'relative'
-                }}
-              >
-                Reforma
-              </Typography>
-              <img 
-                src="/images/AntesDespues/reforma4.png" 
-                alt="Reforma 4" 
-                style={{ 
-                  width: '100%', 
-                  height: 'auto',
-                  borderRadius: 12, 
-                  boxShadow: '0 8px 32px rgba(0,0,0,0.2)',
-                  transition: 'all 0.3s ease',
-                  cursor: 'pointer',
-                  zIndex: 1,
-                  position: 'relative'
-                }} 
-                onMouseEnter={(e) => {
-                  e.target.style.transform = 'scale(1.05)';
-                  e.target.style.boxShadow = '0 12px 40px rgba(232, 58, 90, 0.3)';
-                  e.target.style.zIndex = '10';
-                }}
-                onMouseLeave={(e) => {
-                  e.target.style.transform = 'scale(1)';
-                  e.target.style.boxShadow = '0 8px 32px rgba(0,0,0,0.2)';
-                  e.target.style.zIndex = '1';
-                }}
-              />
-            </Box>
-            <Box sx={{ 
-              display: 'flex', 
-              flexDirection: 'column', 
-              alignItems: 'center', 
-              minWidth: { xs: 120, sm: 200, md: 250, lg: 300 }, 
-              flexShrink: 0 
-            }}>
-              <Typography 
-                variant="h6" 
-                color="primary.main" 
-                sx={{ 
-                  mb: 2, 
-                  fontWeight: 600, 
-                  className: "orbitron",
-                  fontSize: { xs: '0.875rem', md: '1.25rem' },
-                  zIndex: 2,
-                  position: 'relative'
-                }}
-              >
-                Reforma
-              </Typography>
-              <img 
-                src="/images/AntesDespues/reforma5.png" 
-                alt="Reforma 5" 
-                style={{ 
-                  width: '100%', 
-                  height: 'auto',
-                  borderRadius: 12, 
-                  boxShadow: '0 8px 32px rgba(0,0,0,0.2)',
-                  transition: 'all 0.3s ease',
-                  cursor: 'pointer',
-                  zIndex: 1,
-                  position: 'relative'
-                }} 
-                onMouseEnter={(e) => {
-                  e.target.style.transform = 'scale(1.05)';
-                  e.target.style.boxShadow = '0 12px 40px rgba(232, 58, 90, 0.3)';
-                  e.target.style.zIndex = '10';
-                }}
-                onMouseLeave={(e) => {
-                  e.target.style.transform = 'scale(1)';
-                  e.target.style.boxShadow = '0 8px 32px rgba(0,0,0,0.2)';
-                  e.target.style.zIndex = '1';
-                }}
-              />
-            </Box>
-            <Box sx={{ 
-              display: 'flex', 
-              flexDirection: 'column', 
-              alignItems: 'center', 
-              minWidth: { xs: 120, sm: 200, md: 250, lg: 300 }, 
-              flexShrink: 0 
-            }}>
-              <Typography 
-                variant="h6" 
-                color="primary.main" 
-                sx={{ 
-                  mb: 2, 
-                  fontWeight: 600, 
-                  className: "orbitron",
-                  fontSize: { xs: '0.875rem', md: '1.25rem' },
-                  zIndex: 2,
-                  position: 'relative'
-                }}
-              >
-                Reforma
-              </Typography>
-              <img 
-                src="/images/AntesDespues/reforma6.png" 
-                alt="Reforma 6" 
-                style={{ 
-                  width: '100%', 
-                  height: 'auto',
-                  borderRadius: 12, 
-                  boxShadow: '0 8px 32px rgba(0,0,0,0.2)',
-                  transition: 'all 0.3s ease',
-                  cursor: 'pointer',
-                  zIndex: 1,
-                  position: 'relative'
-                }} 
-                onMouseEnter={(e) => {
-                  e.target.style.transform = 'scale(1.05)';
-                  e.target.style.boxShadow = '0 12px 40px rgba(232, 58, 90, 0.3)';
-                  e.target.style.zIndex = '10';
-                }}
-                onMouseLeave={(e) => {
-                  e.target.style.transform = 'scale(1)';
-                  e.target.style.boxShadow = '0 8px 32px rgba(0,0,0,0.2)';
-                  e.target.style.zIndex = '1';
-                }}
-              />
-            </Box>
-            <Box sx={{ 
-              display: 'flex', 
-              flexDirection: 'column', 
-              alignItems: 'center', 
-              minWidth: { xs: 120, sm: 200, md: 250, lg: 300 }, 
-              flexShrink: 0 
-            }}>
-              <Typography 
-                variant="h6" 
-                color="primary.main" 
-                sx={{ 
-                  mb: 2, 
-                  fontWeight: 600, 
-                  className: "orbitron",
-                  fontSize: { xs: '0.875rem', md: '1.25rem' },
-                  zIndex: 2,
-                  position: 'relative'
-                }}
-              >
-                Reforma
-              </Typography>
-              <img 
-                src="/images/AntesDespues/reforma121.png" 
-                alt="Reforma 121" 
-                style={{ 
-                  width: '100%', 
-                  height: 'auto',
-                  borderRadius: 12, 
-                  boxShadow: '0 8px 32px rgba(0,0,0,0.2)',
-                  transition: 'all 0.3s ease',
-                  cursor: 'pointer',
-                  zIndex: 1,
-                  position: 'relative'
-                }} 
-                onMouseEnter={(e) => {
-                  e.target.style.transform = 'scale(1.05)';
-                  e.target.style.boxShadow = '0 12px 40px rgba(232, 58, 90, 0.3)';
-                  e.target.style.zIndex = '10';
-                }}
-                onMouseLeave={(e) => {
-                  e.target.style.transform = 'scale(1)';
-                  e.target.style.boxShadow = '0 8px 32px rgba(0,0,0,0.2)';
-                  e.target.style.zIndex = '1';
-                }}
-              />
+              <Box sx={{ 
+                display: 'flex', 
+                flexDirection: 'column', 
+                alignItems: 'center', 
+                minWidth: { md: 250, lg: 300 }, 
+                flexShrink: 0 
+              }}>
+                <Typography 
+                  variant="h6" 
+                  color="primary.main" 
+                  sx={{ 
+                    mb: 2, 
+                    fontWeight: 600, 
+                    className: "orbitron",
+                    fontSize: { xs: '0.875rem', md: '1.25rem' },
+                    zIndex: 2,
+                    position: 'relative'
+                  }}
+                >
+                  Antes
+                </Typography>
+                <img 
+                  src="/images/AntesDespues/2.png" 
+                  alt="Antes y después - Trabajo 1" 
+                  style={{ 
+                    width: '100%', 
+                    height: 'auto',
+                    borderRadius: 12, 
+                    boxShadow: '0 8px 32px rgba(0,0,0,0.2)',
+                    transition: 'all 0.3s ease',
+                    cursor: 'pointer',
+                    zIndex: 1,
+                    position: 'relative'
+                  }} 
+                  onMouseEnter={(e) => {
+                    e.target.style.transform = 'scale(1.05)';
+                    e.target.style.boxShadow = '0 12px 40px rgba(232, 58, 90, 0.3)';
+                    e.target.style.zIndex = '10';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.transform = 'scale(1)';
+                    e.target.style.boxShadow = '0 8px 32px rgba(0,0,0,0.2)';
+                    e.target.style.zIndex = '1';
+                  }}
+                />
+              </Box>
+              <Box sx={{ 
+                display: 'flex', 
+                flexDirection: 'column', 
+                alignItems: 'center', 
+                minWidth: { md: 250, lg: 300 }, 
+                flexShrink: 0 
+              }}>
+                <Typography 
+                  variant="h6" 
+                  color="primary.main" 
+                  sx={{ 
+                    mb: 2, 
+                    fontWeight: 600, 
+                    className: "orbitron",
+                    fontSize: { xs: '0.875rem', md: '1.25rem' },
+                    zIndex: 2,
+                    position: 'relative'
+                  }}
+                >
+                  Después
+                </Typography>
+                <img 
+                  src="/images/AntesDespues/4.png" 
+                  alt="Antes y después - Trabajo 2" 
+                  style={{ 
+                    width: '100%', 
+                    height: 'auto',
+                    borderRadius: 12, 
+                    boxShadow: '0 8px 32px rgba(0,0,0,0.2)',
+                    transition: 'all 0.3s ease',
+                    cursor: 'pointer',
+                    zIndex: 1,
+                    position: 'relative'
+                  }} 
+                  onMouseEnter={(e) => {
+                    e.target.style.transform = 'scale(1.05)';
+                    e.target.style.boxShadow = '0 12px 40px rgba(232, 58, 90, 0.3)';
+                    e.target.style.zIndex = '10';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.transform = 'scale(1)';
+                    e.target.style.boxShadow = '0 8px 32px rgba(0,0,0,0.2)';
+                    e.target.style.zIndex = '1';
+                  }}
+                />
+              </Box>
+              <Box sx={{ 
+                display: 'flex', 
+                flexDirection: 'column', 
+                alignItems: 'center', 
+                minWidth: { md: 250, lg: 300 }, 
+                flexShrink: 0 
+              }}>
+                <Typography 
+                  variant="h6" 
+                  color="primary.main" 
+                  sx={{ 
+                    mb: 2, 
+                    fontWeight: 600, 
+                    className: "orbitron",
+                    fontSize: { xs: '0.875rem', md: '1.25rem' },
+                    zIndex: 2,
+                    position: 'relative'
+                  }}
+                >
+                  Antes
+                </Typography>
+                <img 
+                  src="/images/AntesDespues/6.png" 
+                  alt="Antes y después - Trabajo 3" 
+                  style={{ 
+                    width: '100%', 
+                    height: 'auto',
+                    borderRadius: 12, 
+                    boxShadow: '0 8px 32px rgba(0,0,0,0.2)',
+                    transition: 'all 0.3s ease',
+                    cursor: 'pointer',
+                    zIndex: 1,
+                    position: 'relative'
+                  }} 
+                  onMouseEnter={(e) => {
+                    e.target.style.transform = 'scale(1.05)';
+                    e.target.style.boxShadow = '0 12px 40px rgba(232, 58, 90, 0.3)';
+                    e.target.style.zIndex = '10';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.transform = 'scale(1)';
+                    e.target.style.boxShadow = '0 8px 32px rgba(0,0,0,0.2)';
+                    e.target.style.zIndex = '1';
+                  }}
+                />
+              </Box>
+              <Box sx={{ 
+                display: 'flex', 
+                flexDirection: 'column', 
+                alignItems: 'center', 
+                minWidth: { md: 250, lg: 300 }, 
+                flexShrink: 0 
+              }}>
+                <Typography 
+                  variant="h6" 
+                  color="primary.main" 
+                  sx={{ 
+                    mb: 2, 
+                    fontWeight: 600, 
+                    className: "orbitron",
+                    fontSize: { xs: '0.875rem', md: '1.25rem' },
+                    zIndex: 2,
+                    position: 'relative'
+                  }}
+                >
+                  Después
+                </Typography>
+                <img 
+                  src="/images/AntesDespues/8.png" 
+                  alt="Antes y después - Trabajo 4" 
+                  style={{ 
+                    width: '100%', 
+                    height: 'auto',
+                    borderRadius: 12, 
+                    boxShadow: '0 8px 32px rgba(0,0,0,0.2)',
+                    transition: 'all 0.3s ease',
+                    cursor: 'pointer',
+                    zIndex: 1,
+                    position: 'relative'
+                  }} 
+                  onMouseEnter={(e) => {
+                    e.target.style.transform = 'scale(1.05)';
+                    e.target.style.boxShadow = '0 12px 40px rgba(232, 58, 90, 0.3)';
+                    e.target.style.zIndex = '10';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.transform = 'scale(1)';
+                    e.target.style.boxShadow = '0 8px 32px rgba(0,0,0,0.2)';
+                    e.target.style.zIndex = '1';
+                  }}
+                />
+              </Box>
+              <Box sx={{ 
+                display: 'flex', 
+                flexDirection: 'column', 
+                alignItems: 'center', 
+                minWidth: { md: 250, lg: 300 }, 
+                flexShrink: 0 
+              }}>
+                <Typography 
+                  variant="h6" 
+                  color="primary.main" 
+                  sx={{ 
+                    mb: 2, 
+                    fontWeight: 600, 
+                    className: "orbitron",
+                    fontSize: { xs: '0.875rem', md: '1.25rem' },
+                    zIndex: 2,
+                    position: 'relative'
+                  }}
+                >
+                  Antes
+                </Typography>
+                <img 
+                  src="/images/AntesDespues/antes11.png" 
+                  alt="Antes y después - Trabajo 5" 
+                  style={{ 
+                    width: '100%', 
+                    height: 'auto',
+                    borderRadius: 12, 
+                    boxShadow: '0 8px 32px rgba(0,0,0,0.2)',
+                    transition: 'all 0.3s ease',
+                    cursor: 'pointer',
+                    zIndex: 1,
+                    position: 'relative'
+                  }} 
+                  onMouseEnter={(e) => {
+                    e.target.style.transform = 'scale(1.05)';
+                    e.target.style.boxShadow = '0 12px 40px rgba(232, 58, 90, 0.3)';
+                    e.target.style.zIndex = '10';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.transform = 'scale(1)';
+                    e.target.style.boxShadow = '0 8px 32px rgba(0,0,0,0.2)';
+                    e.target.style.zIndex = '1';
+                  }}
+                />
+              </Box>
+              <Box sx={{ 
+                display: 'flex', 
+                flexDirection: 'column', 
+                alignItems: 'center', 
+                minWidth: { md: 250, lg: 300 }, 
+                flexShrink: 0 
+              }}>
+                <Typography 
+                  variant="h6" 
+                  color="primary.main" 
+                  sx={{ 
+                    mb: 2, 
+                    fontWeight: 600, 
+                    className: "orbitron",
+                    fontSize: { xs: '0.875rem', md: '1.25rem' },
+                    zIndex: 2,
+                    position: 'relative'
+                  }}
+                >
+                  Después
+                </Typography>
+                <img 
+                  src="/images/AntesDespues/despues21.png" 
+                  alt="Antes y después - Trabajo 6" 
+                  style={{ 
+                    width: '100%', 
+                    height: 'auto',
+                    borderRadius: 12, 
+                    boxShadow: '0 8px 32px rgba(0,0,0,0.2)',
+                    transition: 'all 0.3s ease',
+                    cursor: 'pointer',
+                    zIndex: 1,
+                    position: 'relative'
+                  }} 
+                  onMouseEnter={(e) => {
+                    e.target.style.transform = 'scale(1.05)';
+                    e.target.style.boxShadow = '0 12px 40px rgba(232, 58, 90, 0.3)';
+                    e.target.style.zIndex = '10';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.transform = 'scale(1)';
+                    e.target.style.boxShadow = '0 8px 32px rgba(0,0,0,0.2)';
+                    e.target.style.zIndex = '1';
+                  }}
+                />
+              </Box>
+              <Box sx={{ 
+                display: 'flex', 
+                flexDirection: 'column', 
+                alignItems: 'center', 
+                minWidth: { md: 250, lg: 300 }, 
+                flexShrink: 0 
+              }}>
+                <Typography 
+                  variant="h6" 
+                  color="primary.main" 
+                  sx={{ 
+                    mb: 2, 
+                    fontWeight: 600, 
+                    className: "orbitron",
+                    fontSize: { xs: '0.875rem', md: '1.25rem' },
+                    zIndex: 2,
+                    position: 'relative'
+                  }}
+                >
+                  Reforma
+                </Typography>
+                <img 
+                  src="/images/AntesDespues/reforma1.png" 
+                  alt="Reforma 1" 
+                  style={{ 
+                    width: '100%', 
+                    height: 'auto',
+                    borderRadius: 12, 
+                    boxShadow: '0 8px 32px rgba(0,0,0,0.2)',
+                    transition: 'all 0.3s ease',
+                    cursor: 'pointer',
+                    zIndex: 1,
+                    position: 'relative'
+                  }} 
+                  onMouseEnter={(e) => {
+                    e.target.style.transform = 'scale(1.05)';
+                    e.target.style.boxShadow = '0 12px 40px rgba(232, 58, 90, 0.3)';
+                    e.target.style.zIndex = '10';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.transform = 'scale(1)';
+                    e.target.style.boxShadow = '0 8px 32px rgba(0,0,0,0.2)';
+                    e.target.style.zIndex = '1';
+                  }}
+                />
+              </Box>
+              <Box sx={{ 
+                display: 'flex', 
+                flexDirection: 'column', 
+                alignItems: 'center', 
+                minWidth: { md: 250, lg: 300 }, 
+                flexShrink: 0 
+              }}>
+                <Typography 
+                  variant="h6" 
+                  color="primary.main" 
+                  sx={{ 
+                    mb: 2, 
+                    fontWeight: 600, 
+                    className: "orbitron",
+                    fontSize: { xs: '0.875rem', md: '1.25rem' },
+                    zIndex: 2,
+                    position: 'relative'
+                  }}
+                >
+                  Reforma
+                </Typography>
+                <img 
+                  src="/images/AntesDespues/reforma2.png" 
+                  alt="Reforma 2" 
+                  style={{ 
+                    width: '100%', 
+                    height: 'auto',
+                    borderRadius: 12, 
+                    boxShadow: '0 8px 32px rgba(0,0,0,0.2)',
+                    transition: 'all 0.3s ease',
+                    cursor: 'pointer',
+                    zIndex: 1,
+                    position: 'relative'
+                  }} 
+                  onMouseEnter={(e) => {
+                    e.target.style.transform = 'scale(1.05)';
+                    e.target.style.boxShadow = '0 12px 40px rgba(232, 58, 90, 0.3)';
+                    e.target.style.zIndex = '10';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.transform = 'scale(1)';
+                    e.target.style.boxShadow = '0 8px 32px rgba(0,0,0,0.2)';
+                    e.target.style.zIndex = '1';
+                  }}
+                />
+              </Box>
+              <Box sx={{ 
+                display: 'flex', 
+                flexDirection: 'column', 
+                alignItems: 'center', 
+                minWidth: { md: 250, lg: 300 }, 
+                flexShrink: 0 
+              }}>
+                <Typography 
+                  variant="h6" 
+                  color="primary.main" 
+                  sx={{ 
+                    mb: 2, 
+                    fontWeight: 600, 
+                    className: "orbitron",
+                    fontSize: { xs: '0.875rem', md: '1.25rem' },
+                    zIndex: 2,
+                    position: 'relative'
+                  }}
+                >
+                  Reforma
+                </Typography>
+                <img 
+                  src="/images/AntesDespues/reforma3.png" 
+                  alt="Reforma 3" 
+                  style={{ 
+                    width: '100%', 
+                    height: 'auto',
+                    borderRadius: 12, 
+                    boxShadow: '0 8px 32px rgba(0,0,0,0.2)',
+                    transition: 'all 0.3s ease',
+                    cursor: 'pointer',
+                    zIndex: 1,
+                    position: 'relative'
+                  }} 
+                  onMouseEnter={(e) => {
+                    e.target.style.transform = 'scale(1.05)';
+                    e.target.style.boxShadow = '0 12px 40px rgba(232, 58, 90, 0.3)';
+                    e.target.style.zIndex = '10';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.transform = 'scale(1)';
+                    e.target.style.boxShadow = '0 8px 32px rgba(0,0,0,0.2)';
+                    e.target.style.zIndex = '1';
+                  }}
+                />
+              </Box>
+              <Box sx={{ 
+                display: 'flex', 
+                flexDirection: 'column', 
+                alignItems: 'center', 
+                minWidth: { md: 250, lg: 300 }, 
+                flexShrink: 0 
+              }}>
+                <Typography 
+                  variant="h6" 
+                  color="primary.main" 
+                  sx={{ 
+                    mb: 2, 
+                    fontWeight: 600, 
+                    className: "orbitron",
+                    fontSize: { xs: '0.875rem', md: '1.25rem' },
+                    zIndex: 2,
+                    position: 'relative'
+                  }}
+                >
+                  Reforma
+                </Typography>
+                <img 
+                  src="/images/AntesDespues/reforma4.png" 
+                  alt="Reforma 4" 
+                  style={{ 
+                    width: '100%', 
+                    height: 'auto',
+                    borderRadius: 12, 
+                    boxShadow: '0 8px 32px rgba(0,0,0,0.2)',
+                    transition: 'all 0.3s ease',
+                    cursor: 'pointer',
+                    zIndex: 1,
+                    position: 'relative'
+                  }} 
+                  onMouseEnter={(e) => {
+                    e.target.style.transform = 'scale(1.05)';
+                    e.target.style.boxShadow = '0 12px 40px rgba(232, 58, 90, 0.3)';
+                    e.target.style.zIndex = '10';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.transform = 'scale(1)';
+                    e.target.style.boxShadow = '0 8px 32px rgba(0,0,0,0.2)';
+                    e.target.style.zIndex = '1';
+                  }}
+                />
+              </Box>
+              <Box sx={{ 
+                display: 'flex', 
+                flexDirection: 'column', 
+                alignItems: 'center', 
+                minWidth: { md: 250, lg: 300 }, 
+                flexShrink: 0 
+              }}>
+                <Typography 
+                  variant="h6" 
+                  color="primary.main" 
+                  sx={{ 
+                    mb: 2, 
+                    fontWeight: 600, 
+                    className: "orbitron",
+                    fontSize: { xs: '0.875rem', md: '1.25rem' },
+                    zIndex: 2,
+                    position: 'relative'
+                  }}
+                >
+                  Reforma
+                </Typography>
+                <img 
+                  src="/images/AntesDespues/reforma5.png" 
+                  alt="Reforma 5" 
+                  style={{ 
+                    width: '100%', 
+                    height: 'auto',
+                    borderRadius: 12, 
+                    boxShadow: '0 8px 32px rgba(0,0,0,0.2)',
+                    transition: 'all 0.3s ease',
+                    cursor: 'pointer',
+                    zIndex: 1,
+                    position: 'relative'
+                  }} 
+                  onMouseEnter={(e) => {
+                    e.target.style.transform = 'scale(1.05)';
+                    e.target.style.boxShadow = '0 12px 40px rgba(232, 58, 90, 0.3)';
+                    e.target.style.zIndex = '10';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.transform = 'scale(1)';
+                    e.target.style.boxShadow = '0 8px 32px rgba(0,0,0,0.2)';
+                    e.target.style.zIndex = '1';
+                  }}
+                />
+              </Box>
+              <Box sx={{ 
+                display: 'flex', 
+                flexDirection: 'column', 
+                alignItems: 'center', 
+                minWidth: { md: 250, lg: 300 }, 
+                flexShrink: 0 
+              }}>
+                <Typography 
+                  variant="h6" 
+                  color="primary.main" 
+                  sx={{ 
+                    mb: 2, 
+                    fontWeight: 600, 
+                    className: "orbitron",
+                    fontSize: { xs: '0.875rem', md: '1.25rem' },
+                    zIndex: 2,
+                    position: 'relative'
+                  }}
+                >
+                  Reforma
+                </Typography>
+                <img 
+                  src="/images/AntesDespues/reforma6.png" 
+                  alt="Reforma 6" 
+                  style={{ 
+                    width: '100%', 
+                    height: 'auto',
+                    borderRadius: 12, 
+                    boxShadow: '0 8px 32px rgba(0,0,0,0.2)',
+                    transition: 'all 0.3s ease',
+                    cursor: 'pointer',
+                    zIndex: 1,
+                    position: 'relative'
+                  }} 
+                  onMouseEnter={(e) => {
+                    e.target.style.transform = 'scale(1.05)';
+                    e.target.style.boxShadow = '0 12px 40px rgba(232, 58, 90, 0.3)';
+                    e.target.style.zIndex = '10';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.transform = 'scale(1)';
+                    e.target.style.boxShadow = '0 8px 32px rgba(0,0,0,0.2)';
+                    e.target.style.zIndex = '1';
+                  }}
+                />
+              </Box>
+              <Box sx={{ 
+                display: 'flex', 
+                flexDirection: 'column', 
+                alignItems: 'center', 
+                minWidth: { md: 250, lg: 300 }, 
+                flexShrink: 0 
+              }}>
+                <Typography 
+                  variant="h6" 
+                  color="primary.main" 
+                  sx={{ 
+                    mb: 2, 
+                    fontWeight: 600, 
+                    className: "orbitron",
+                    fontSize: { xs: '0.875rem', md: '1.25rem' },
+                    zIndex: 2,
+                    position: 'relative'
+                  }}
+                >
+                  Reforma
+                </Typography>
+                <img 
+                  src="/images/AntesDespues/reforma121.png" 
+                  alt="Reforma 121" 
+                  style={{ 
+                    width: '100%', 
+                    height: 'auto',
+                    borderRadius: 12, 
+                    boxShadow: '0 8px 32px rgba(0,0,0,0.2)',
+                    transition: 'all 0.3s ease',
+                    cursor: 'pointer',
+                    zIndex: 1,
+                    position: 'relative'
+                  }} 
+                  onMouseEnter={(e) => {
+                    e.target.style.transform = 'scale(1.05)';
+                    e.target.style.boxShadow = '0 12px 40px rgba(232, 58, 90, 0.3)';
+                    e.target.style.zIndex = '10';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.transform = 'scale(1)';
+                    e.target.style.boxShadow = '0 8px 32px rgba(0,0,0,0.2)';
+                    e.target.style.zIndex = '1';
+                  }}
+                />
+              </Box>
             </Box>
           </Box>
         </Container>

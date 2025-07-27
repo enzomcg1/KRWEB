@@ -486,6 +486,46 @@ function App() {
             </Box>
           </Box>
         </Container>
+        {/* Proceso de Trabajo Section */}
+        <Container maxWidth="lg" sx={{ py: 6, bgcolor: 'background.paper' }}>
+          <Typography variant="h3" color="primary.main" textAlign="center" gutterBottom fontWeight={700} className="orbitron" sx={{ mb: 6 }}>
+            Proceso de Trabajo
+          </Typography>
+          <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 4 }}>
+            <Box sx={{ textAlign: 'center', p: 3 }}>
+              <Typography variant="h4" color="primary.main" sx={{ mb: 2, fontWeight: 600, className: "orbitron" }}>
+                1. Contacto y Presupuesto
+              </Typography>
+              <Typography variant="body1" color="text.secondary" sx={{ lineHeight: 1.6 }}>
+                Contactanos por WhatsApp o teléfono. Evaluamos tu proyecto y te entregamos un presupuesto detallado y transparente sin compromiso.
+              </Typography>
+            </Box>
+            <Box sx={{ textAlign: 'center', p: 3 }}>
+              <Typography variant="h4" color="primary.main" sx={{ mb: 2, fontWeight: 600, className: "orbitron" }}>
+                2. Visita Técnica
+              </Typography>
+              <Typography variant="body1" color="text.secondary" sx={{ lineHeight: 1.6 }}>
+                Realizamos una visita al sitio para evaluar las condiciones, tomar medidas precisas y planificar la ejecución de la obra.
+              </Typography>
+            </Box>
+            <Box sx={{ textAlign: 'center', p: 3 }}>
+              <Typography variant="h4" color="primary.main" sx={{ mb: 2, fontWeight: 600, className: "orbitron" }}>
+                3. Ejecución de la Obra
+              </Typography>
+              <Typography variant="body1" color="text.secondary" sx={{ lineHeight: 1.6 }}>
+                Nuestro equipo especializado ejecuta la obra con materiales de calidad y técnicas profesionales, manteniendo comunicación constante.
+              </Typography>
+            </Box>
+            <Box sx={{ textAlign: 'center', p: 3 }}>
+              <Typography variant="h4" color="primary.main" sx={{ mb: 2, fontWeight: 600, className: "orbitron" }}>
+                4. Entrega Final y Revisión
+              </Typography>
+              <Typography variant="body1" color="text.secondary" sx={{ lineHeight: 1.6 }}>
+                Realizamos una revisión exhaustiva junto al cliente, garantizando que todo esté perfecto antes de la entrega final.
+              </Typography>
+            </Box>
+          </Box>
+        </Container>
         {/* Footer */}
         <Box component="footer" sx={{ py: 2, textAlign: 'center', bgcolor: 'background.paper', mt: 'auto', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 2 }}>
           <Typography variant="body2" color="text.secondary">

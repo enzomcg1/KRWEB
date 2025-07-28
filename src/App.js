@@ -50,8 +50,95 @@ const lightTheme = createTheme({
 
 function App() {
   const [themeMode, setThemeMode] = useState(null);
+  const [language, setLanguage] = useState('es');
   const [open, setOpen] = useState(true);
   const isMobile = useMediaQuery('(max-width:600px)');
+
+  // Translations
+  const translations = {
+    es: {
+      themeDialog: {
+        title: 'Elige el modo visual',
+        content: '¿Prefieres modo oscuro o claro?',
+        dark: 'Oscuro',
+        light: 'Claro'
+      },
+      header: {
+        slogan: 'Transformamos tu espacio, mejoramos tu vida.'
+      },
+      sections: {
+        ourWork: 'Nuestros Trabajos',
+        whyChooseUs: '¿Por qué elegirnos?',
+        workProcess: 'Proceso de Trabajo',
+        contact: 'Pedir Presupuesto',
+        doubts: '¿Dudas?',
+        doubtsSubtitle: '¿Querés saber cuánto cuesta tu proyecto?',
+        whatsappCTA: '¡Hablá con nosotros por WhatsApp sin compromiso!'
+      },
+      process: {
+        step1: 'Contacto y presupuesto',
+        step2: 'Visita técnica',
+        step3: 'Ejecución de la obra',
+        step4: 'Entrega final y revisión'
+      },
+      advantages: {
+        title1: 'Materiales de alta calidad',
+        title2: 'Compromiso con los tiempos de entrega',
+        title3: 'Limpieza y orden en cada etapa',
+        title4: 'Trato directo y transparente'
+      },
+      gallery: {
+        before: 'Antes',
+        after: 'Después',
+        reform: 'Reforma'
+      },
+      footer: {
+        copyright: '© 2024 KR Reformas. Todos los derechos reservados.'
+      }
+    },
+    en: {
+      themeDialog: {
+        title: 'Choose visual mode',
+        content: 'Do you prefer dark or light mode?',
+        dark: 'Dark',
+        light: 'Light'
+      },
+      header: {
+        slogan: 'We transform your space, we improve your life.'
+      },
+      sections: {
+        ourWork: 'Our Work',
+        whyChooseUs: 'Why Choose Us?',
+        workProcess: 'Work Process',
+        contact: 'Get Quote',
+        doubts: 'Questions?',
+        doubtsSubtitle: 'Want to know how much your project costs?',
+        whatsappCTA: 'Talk to us on WhatsApp without commitment!'
+      },
+      process: {
+        step1: 'Contact and quote',
+        step2: 'Technical visit',
+        step3: 'Work execution',
+        step4: 'Final delivery and review'
+      },
+      advantages: {
+        title1: 'High quality materials',
+        title2: 'Commitment to delivery times',
+        title3: 'Cleanliness and order in each stage',
+        title4: 'Direct and transparent treatment'
+      },
+      gallery: {
+        before: 'Before',
+        after: 'After',
+        reform: 'Reform'
+      },
+      footer: {
+        copyright: '© 2024 KR Reformas. All rights reserved.'
+      }
+    }
+  };
+
+  const t = translations[language];
 
   useEffect(() => {
     // Optionally, you could check for a saved preference here
@@ -69,13 +156,13 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Dialog open={open} disableEscapeKeyDown disableBackdropClick>
-        <DialogTitle>Elige el modo visual</DialogTitle>
+        <DialogTitle>{t.themeDialog.title}</DialogTitle>
         <DialogContent>
-          ¿Prefieres modo oscuro o claro?
+          {t.themeDialog.content}
         </DialogContent>
         <DialogActions>
-          <Button onClick={() => handleThemeSelect('dark')} color="primary" variant="contained">Dark</Button>
-          <Button onClick={() => handleThemeSelect('light')} color="primary" variant="outlined">Light</Button>
+          <Button onClick={() => handleThemeSelect('dark')} color="primary" variant="contained">{t.themeDialog.dark}</Button>
+          <Button onClick={() => handleThemeSelect('light')} color="primary" variant="outlined">{t.themeDialog.light}</Button>
         </DialogActions>
       </Dialog>
       <Box
@@ -96,8 +183,8 @@ function App() {
           boxShadow: 1, 
           display: 'flex', 
           alignItems: 'center', 
-          justifyContent: 'flex-start', 
-          flexDirection: 'column' 
+          justifyContent: 'space-between', 
+          flexDirection: 'row' 
         }}>
           <Box sx={{ 
             display: 'flex', 
@@ -145,10 +232,34 @@ function App() {
                   textAlign: { xs: 'center', sm: 'left' }
                 }}
               >
-                Transformamos tu espacio, mejoramos tu vida.
+                {t.header.slogan}
               </Typography>
             </Box>
           </Box>
+          
+          {/* Language Toggle Button */}
+          <IconButton
+            onClick={() => setLanguage(language === 'es' ? 'en' : 'es')}
+            sx={{
+              color: 'primary.main',
+              border: 2,
+              borderColor: 'primary.main',
+              borderRadius: 2,
+              px: 2,
+              py: 1,
+              '&:hover': {
+                backgroundColor: 'primary.main',
+                color: 'white',
+                transform: 'scale(1.05)',
+                transition: 'all 0.3s ease'
+              },
+              transition: 'all 0.3s ease'
+            }}
+          >
+            <Typography variant="body2" fontWeight="bold">
+              {language === 'es' ? 'EN' : 'ES'}
+            </Typography>
+          </IconButton>
         </Box>
         {/* Hero Section */}
         <Container maxWidth="md" sx={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', px: { xs: 2, md: 3 } }}>
@@ -161,7 +272,7 @@ function App() {
               className="orbitron"
               sx={{ fontSize: { xs: '1.75rem', sm: '2.5rem', md: '3.75rem' } }}
             >
-              Espacio renovado, con calidad garantizada
+              {language === 'es' ? 'Espacio renovado, con calidad garantizada' : 'Renewed space, with guaranteed quality'}
             </Typography>
             <Typography 
               variant="h6" 
@@ -169,7 +280,10 @@ function App() {
               paragraph
               sx={{ fontSize: { xs: '0.875rem', sm: '1.25rem' } }}
             >
-              En KR Reformas y Pinturas nos especializamos en transformar hogares y espacios comerciales con acabados profesionales, pintura de alta calidad y reformas a medida. Nos encargamos de todo, desde pequeños arreglos hasta reformas integrales, con atención al detalle y compromiso total con el cliente.
+              {language === 'es' 
+                ? 'En KR Reformas y Pinturas nos especializamos en transformar hogares y espacios comerciales con acabados profesionales, pintura de alta calidad y reformas a medida. Nos encargamos de todo, desde pequeños arreglos hasta reformas integrales, con atención al detalle y compromiso total con el cliente.'
+                : 'At KR Reformas y Pinturas we specialize in transforming homes and commercial spaces with professional finishes, high-quality paint and custom renovations. We handle everything from small repairs to comprehensive renovations, with attention to detail and total commitment to the client.'
+              }
             </Typography>
             <Button 
               variant="contained" 
@@ -191,12 +305,15 @@ function App() {
                 },
               }}
               onClick={() => {
-                const message = encodeURIComponent("Hola! Me gustaría solicitar un presupuesto para reformas/pintura.");
+                const message = encodeURIComponent(language === 'es' 
+                  ? "Hola! Me gustaría solicitar un presupuesto para reformas/pintura."
+                  : "Hello! I would like to request a quote for renovations/painting."
+                );
                 const whatsappUrl = `https://wa.me/34622215241?text=${message}`;
                 window.open(whatsappUrl, '_blank');
               }}
             >
-              Pedir Presupuesto
+              {t.sections.contact}
             </Button>
           </Box>
         </Container>
@@ -214,7 +331,7 @@ function App() {
               fontSize: { xs: '1.75rem', sm: '2.5rem', md: '3rem' }
             }}
           >
-            Nuestros Trabajos
+            {t.sections.ourWork}
           </Typography>
           <Box sx={{ 
             display: 'flex', 
@@ -263,7 +380,7 @@ function App() {
                     position: 'relative'
                   }}
                 >
-                  Antes
+                  {t.gallery.before}
                 </Typography>
                 <img 
                   src="/images/AntesDespues/2.png" 
@@ -309,7 +426,7 @@ function App() {
                     position: 'relative'
                   }}
                 >
-                  Después
+                  {t.gallery.after}
                 </Typography>
                 <img 
                   src="/images/AntesDespues/4.png" 
@@ -355,7 +472,7 @@ function App() {
                     position: 'relative'
                   }}
                 >
-                  Antes
+                  {t.gallery.before}
                 </Typography>
                 <img 
                   src="/images/AntesDespues/6.png" 
@@ -401,7 +518,7 @@ function App() {
                     position: 'relative'
                   }}
                 >
-                  Después
+                  {t.gallery.after}
                 </Typography>
                 <img 
                   src="/images/AntesDespues/8.png" 
@@ -447,7 +564,7 @@ function App() {
                     position: 'relative'
                   }}
                 >
-                  Antes
+                  {t.gallery.before}
                 </Typography>
                 <img 
                   src="/images/AntesDespues/antes11.png" 
@@ -493,7 +610,7 @@ function App() {
                     position: 'relative'
                   }}
                 >
-                  Después
+                  {t.gallery.after}
                 </Typography>
                 <img 
                   src="/images/AntesDespues/despues21.png" 
@@ -539,7 +656,7 @@ function App() {
                     position: 'relative'
                   }}
                 >
-                  Reforma
+                  {t.gallery.reform}
                 </Typography>
                 <img 
                   src="/images/AntesDespues/reforma1.png" 
@@ -585,7 +702,7 @@ function App() {
                     position: 'relative'
                   }}
                 >
-                  Reforma
+                  {t.gallery.reform}
                 </Typography>
                 <img 
                   src="/images/AntesDespues/reforma2.png" 
@@ -631,7 +748,7 @@ function App() {
                     position: 'relative'
                   }}
                 >
-                  Reforma
+                  {t.gallery.reform}
                 </Typography>
                 <img 
                   src="/images/AntesDespues/reforma3.png" 
@@ -677,7 +794,7 @@ function App() {
                     position: 'relative'
                   }}
                 >
-                  Reforma
+                  {t.gallery.reform}
                 </Typography>
                 <img 
                   src="/images/AntesDespues/reforma4.png" 
@@ -723,7 +840,7 @@ function App() {
                     position: 'relative'
                   }}
                 >
-                  Reforma
+                  {t.gallery.reform}
                 </Typography>
                 <img 
                   src="/images/AntesDespues/reforma5.png" 
@@ -769,7 +886,7 @@ function App() {
                     position: 'relative'
                   }}
                 >
-                  Reforma
+                  {t.gallery.reform}
                 </Typography>
                 <img 
                   src="/images/AntesDespues/reforma6.png" 
@@ -815,7 +932,7 @@ function App() {
                     position: 'relative'
                   }}
                 >
-                  Reforma
+                  {t.gallery.reform}
                 </Typography>
                 <img 
                   src="/images/AntesDespues/reforma121.png" 
@@ -859,7 +976,7 @@ function App() {
               fontSize: { xs: '1.75rem', sm: '2.5rem', md: '3rem' }
             }}
           >
-            ¿Por qué elegirnos?
+            {t.sections.whyChooseUs}
           </Typography>
           <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: { xs: 3, md: 4 } }}>
             <Box sx={{ 
@@ -890,7 +1007,7 @@ function App() {
                     fontSize: { xs: '1rem', md: '1.25rem' }
                   }}
                 >
-                  Materiales de alta calidad
+                  {t.advantages.title1}
                 </Typography>
                 <Typography 
                   variant="body1" 
@@ -932,7 +1049,7 @@ function App() {
                     fontSize: { xs: '1rem', md: '1.25rem' }
                   }}
                 >
-                  Compromiso con los tiempos
+                  {t.advantages.title2}
                 </Typography>
                 <Typography 
                   variant="body1" 
@@ -974,7 +1091,7 @@ function App() {
                     fontSize: { xs: '1rem', md: '1.25rem' }
                   }}
                 >
-                  Limpieza y orden
+                  {t.advantages.title3}
                 </Typography>
                 <Typography 
                   variant="body1" 
@@ -1016,7 +1133,7 @@ function App() {
                     fontSize: { xs: '1rem', md: '1.25rem' }
                   }}
                 >
-                  Trato directo y transparente
+                  {t.advantages.title4}
                 </Typography>
                 <Typography 
                   variant="body1" 
@@ -1046,7 +1163,7 @@ function App() {
               fontSize: { xs: '1.75rem', sm: '2.5rem', md: '3rem' }
             }}
           >
-            Proceso de Trabajo
+            {t.sections.workProcess}
           </Typography>
           <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: { xs: 3, md: 4 } }}>
             <Box sx={{ 
@@ -1071,7 +1188,7 @@ function App() {
                   fontSize: { xs: '1.25rem', sm: '1.5rem', md: '2.125rem' }
                 }}
               >
-                1. Contacto y Presupuesto
+                1. {t.process.step1}
               </Typography>
               <Typography 
                 variant="body1" 
@@ -1106,7 +1223,7 @@ function App() {
                   fontSize: { xs: '1.25rem', sm: '1.5rem', md: '2.125rem' }
                 }}
               >
-                2. Visita Técnica
+                2. {t.process.step2}
               </Typography>
               <Typography 
                 variant="body1" 
@@ -1141,7 +1258,7 @@ function App() {
                   fontSize: { xs: '1.25rem', sm: '1.5rem', md: '2.125rem' }
                 }}
               >
-                3. Ejecución de la Obra
+                3. {t.process.step3}
               </Typography>
               <Typography 
                 variant="body1" 
@@ -1176,7 +1293,7 @@ function App() {
                   fontSize: { xs: '1.25rem', sm: '1.5rem', md: '2.125rem' }
                 }}
               >
-                4. Entrega Final y Revisión
+                4. {t.process.step4}
               </Typography>
               <Typography 
                 variant="body1" 
@@ -1211,7 +1328,7 @@ function App() {
                 gutterBottom
                 sx={{ fontSize: { xs: '1rem', md: '1.25rem' } }}
               >
-                ¿Querés saber cuánto cuesta tu proyecto?
+                {t.sections.doubtsSubtitle}
               </Typography>
               <Typography 
                 variant="body1" 
@@ -1221,7 +1338,7 @@ function App() {
                   fontSize: { xs: '0.875rem', md: '1rem' }
                 }}
               >
-                📲 ¡Hablá con nosotros por WhatsApp sin compromiso!
+                📲 {t.sections.whatsappCTA}
               </Typography>
               <Button
                 component="a"
@@ -1260,7 +1377,7 @@ function App() {
                 color="text.secondary"
                 sx={{ fontSize: { xs: '0.75rem', md: '0.875rem' } }}
               >
-                © 2024 KR Reformas. Todos los derechos reservados.
+                {t.footer.copyright}
               </Typography>
               <IconButton
                 component="a"

@@ -189,9 +189,8 @@ function App() {
           <Box sx={{ 
             display: 'flex', 
             alignItems: 'center', 
-            width: '100%', 
+            flex: 1,
             justifyContent: 'flex-start', 
-            mb: 1,
             flexDirection: { xs: 'column', sm: 'row' },
             textAlign: { xs: 'center', sm: 'left' }
           }}>
@@ -247,6 +246,12 @@ function App() {
               borderRadius: 2,
               px: 2,
               py: 1,
+              backgroundColor: 'background.paper',
+              boxShadow: 2,
+              minWidth: 50,
+              height: 40,
+              zIndex: 10,
+              position: 'relative',
               '&:hover': {
                 backgroundColor: 'primary.main',
                 color: 'white',
@@ -256,7 +261,7 @@ function App() {
               transition: 'all 0.3s ease'
             }}
           >
-            <Typography variant="body2" fontWeight="bold">
+            <Typography variant="body2" fontWeight="bold" fontSize="0.875rem">
               {language === 'es' ? 'EN' : 'ES'}
             </Typography>
           </IconButton>
